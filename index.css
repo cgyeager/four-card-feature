@@ -1,0 +1,144 @@
+:root {
+--Red: hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+
+--Font-size: 15px;
+}
+
+body {
+  font-family: 'Poppins';
+
+  display: flex;
+  justify-content: center;
+}
+
+section {
+}
+
+.headline {
+  padding: 1rem;
+  font-size: calc(var(--Font-size)*1.5);
+}
+
+.headline h1:first-child {
+  font-weight: 200;
+  margin-bottom: 0;
+}
+.headline h1:last-child {
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.description {
+  padding: 1rem;
+  font-weight: 200;
+  font-size: calc(var(--Font-size)*1.35);
+  text-align: justify;
+  text-indent: -10px;
+  padding-left: 30px;
+  max-width: 600px;
+}
+
+main {
+  width: 90vw;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.card-wrapper {
+  margin-top: 2rem;
+}
+
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 4px 4px 4px 4px rgb(0, 0, 0 , 0.1);
+  padding: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 7rem;
+  margin: 2rem 1rem 2.5rem 1rem;
+}
+
+.card > h2 {
+  font-weight: 500;
+  font-size: calc(var(--Font-size)*1.8);
+}
+
+.card p {
+  margin-bottom: 3rem;
+  font-weight: 200;
+}
+
+.card > img {
+  position: relative;
+  float: right;
+  width: 80px !important;
+  height: 80px !important;
+}
+
+.supervisor {
+  border-top: 6px solid var(--Cyan);
+}
+
+.team {
+  border-top: 6px solid var(--Red);
+
+}
+
+.karma {
+  border-top: 6px solid var(--Orange);
+
+}
+
+.calculator {
+  border-top: 6px solid var(--Blue);
+
+}
+
+@media (min-width: 1440px) {
+  main {
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+  }
+
+  .card-wrapper {
+    display: grid;
+    padding-left: 1rem;
+  }
+  .card {
+    padding-bottom: 2rem;
+    margin: 2rem;
+    width: 400px;
+  }
+
+  .team {
+    grid-area: 1 / 2 / 3 / 3;
+  }
+
+  .supervisor {
+    grid-area: 2 / 1 / 4 / 2;
+  }
+
+  .karma {
+    grid-area: 3 / 2 / 5 / 3;
+  }
+
+  .calculator {
+    grid-area: 2 / 3 / 4 / 4;
+  }
+
+}
+
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
